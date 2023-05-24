@@ -25,7 +25,7 @@ public class Ifs {
             System.out.println("밤입니다.");
         }
 
-        int time = 15;
+         time = 15;
         if (time < 12) {
             System.out.println("오전입니다.");
         }
@@ -41,3 +41,6 @@ public class Ifs {
         System.out.println();
     }
 }
+
+
+// return 0;
