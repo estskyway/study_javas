@@ -9,9 +9,6 @@ public class Main {
         A = myObj.nextInt();
         B = myObj.nextInt();
         System.out.println(A*B);
-        A = myObj.nextInt();
-        B = myObj.nextInt();
-        System.out.println(A*B);
         // return 0;
     }
 }
