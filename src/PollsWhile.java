@@ -18,7 +18,7 @@ public class PollsWhile {
                 else if (answer.equals("S") || answer.equals("Statistic")) {
                     System.out.println("설문통계"));
                 }
-                else (|| answer.equals("E")|| answer.equals("Exit")) {
+                else  {
                     System.out.println("설문종료");
                     break;
                 }
