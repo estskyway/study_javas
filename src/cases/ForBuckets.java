@@ -1,7 +1,18 @@
 package cases;
 
 import java.util.Scanner;
+// * Quest
+// --- 장보기 시작 ---
+// 장바구니엔 3가지만 넣을 수 있습니다.
 
+// 1 번째 담기 : 닭고기
+// 2 번째 담기 : 대추
+// 3 번째 담기 : 찹쌀
+
+// --- 담은 내용물 ---
+// 닭고기, 대추, 찹쌀
+
+// --- 장보기 종료 ---
 public class ForBuckets {
     public static void main(String[] args) {
         try {
