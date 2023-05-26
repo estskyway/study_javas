@@ -21,40 +21,41 @@ public class CasherFor {
     public static void main(String[] args) {
         try {
             //장바구니 5개 담기
-            int bucket_1 = 0;
-            int bucket_2 = 0;
-            int bucket_3 = 0;
-            int bucket_4 = 0;
-            int bucket_5 = 0;
+            // int bucket_1 = 0;
+            // int bucket_2 = 0;
+            // int bucket_3 = 0;
+            // int bucket_4 = 0;
+            // int bucket_5 = 0;
+            int[] bucket = {0,0,0,0,0};
             System.out.println("---계산 시작---");
             Scanner myObj = new Scanner(System.in); 
 
-            for (int first = 0; first < 5; ) {
-                System.out.print(" 1번째 담기 : ");
-                bucket_1 = myObj.nextInt();
-                
-                System.out.print(" 2번째 담기 : ");
-                bucket_2 = myObj.nextInt();
-                if(bucket_2 > 100) {
-                    bucket_2 = 0;
+            for (int first = 0; first < 5; first = first + 1) {
+                System.out.print((first+1)+" 번째 담기 : ");
+                bucket[first] = myObj.nextInt();
+                if(bucket[first] > 100) {
+                    bucket[first] = 0;
                 }
                 
-                System.out.print(" 3번째 담기 : ");
-                bucket_3 = myObj.nextInt();
+                // System.out.print(" 3번째 담기 : ");
+                // bucket_3 = myObj.nextInt();
                 
-                System.out.print(" 4번째 담기 : ");
-                bucket_4 = myObj.nextInt();
-                break;
+                // System.out.print(" 4번째 담기 : ");
+                // bucket_4 = myObj.nextInt();
                 
             }
-            System.out.println(bucket_1);
-            System.out.println(bucket_2);
-            System.out.println(bucket_3);
-            System.out.println(bucket_4);
+            // System.out.println(bucket_1);
+            // System.out.println(bucket_2);
+            // System.out.println(bucket_3);
+            // System.out.println(bucket_4);
+            System.out.print(bucket[0]+",");
+            System.out.print(bucket[1]+",");
+            System.out.print(bucket[2]+",");
+            System.out.println(bucket[3]);
 
             System.out.println("---담은 총합---");
-            System.out.println(bucket_1+bucket_2+bucket_3+bucket_4+bucket_5);
-
+            // System.out.println(bucket_1+bucket_2+bucket_3+bucket_4+bucket_5);
+            System.out.println(bucket[0]+bucket[1]+bucket[2]+bucket[3]+bucket[4]);
             System.out.println("---계산 종료---");
 
         } catch (Exception e) {
