@@ -1,3 +1,5 @@
+package test;
+
 import java.util.Scanner;
 public class Main {
     // https://www.acmicpc.net/problem/10998

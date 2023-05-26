@@ -8,6 +8,6 @@
 | If..else | [Ifs.java](./src/Ifs.java) | 조건에 따라 분기 | 비고 |
 | 데이터 타입 변환 | [TypeCasting.java](https://github.com/estskyway/study_javas/blob/master/src/TypeCasting.java) | 데이터 타입을 변경 | 비고 |
 | Break | [breaks.java](./src/breaks.java) | 루프 탈출 문법 | --- |
-| --- | --- | --- | --- |
+| ForBucket | [ForBuckets.java](./src/cases/ForBuckets.java) | 장바구니에 물건을 담는 방법 | --- |
 ## JAVA 연습문제 
-
+| Pollwhile | [PollsWhile.java](./src/PollsWhile.java) | --- | --- |
