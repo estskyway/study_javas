@@ -16,7 +16,8 @@ public class PollsWhile {
                     System.out.println("설문시작");
                 } 
                 else if (answer.equals("S") || answer.equals("Statistic")) {
-                    System.out.println("설문통계"));
+                    // 두가지 이상의 옵션을 넣을 때는 "||"(or라는 뜻)기호를 사용한다.
+                    System.out.println("설문통계");
                 }
                 else  {
                     System.out.println("설문종료");
