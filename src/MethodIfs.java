@@ -30,6 +30,7 @@ public class MethodIfs {
 
     public static void main(String[] args) {
         try {
+            int time = 15;
             String str = "";
             MethodIfs methodifs = new MethodIfs();
             String result = methodifs.iftime(time);
