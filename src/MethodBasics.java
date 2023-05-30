@@ -12,8 +12,8 @@ public class MethodBasics {
 }
  public int D(int y)
     {
-    int result = y + 1;
-    return result;
+    int result = y + 2;
+    return result; //2
     }
 
     public static void main(String[] args) {
@@ -23,10 +23,18 @@ public class MethodBasics {
             int z = 1;
             // y = x + 1; // 변수에 + 1
             // y = F(x);
+            //타입을 설정 - 변수이름을 만든다. - new 라는 인스턴트를 만든다 
             MethodBasics methodBasics = new MethodBasics();
             y = methodBasics.F(x);
-            z = y + 1; // 변수에 + 1
-            z = methodBasics.F(y);
+            // z = y + 1; // 변수에 + 1
+            // z = methodBasics.F(y);
+            y = y + 1; // 변수에 + 1
+            MethodBasics methodBasics_first = new MethodBasics();
+            y = methodBasics_first.F(z); //f(0)
+            // System.out.println(y);
+            y = methodBasics_first.D(x); //2 4
+            // System.out.println(y);
+
         } catch (Exception e) {
             // TODO: handle exception
         }
