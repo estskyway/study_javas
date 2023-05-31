@@ -13,7 +13,9 @@ public class Scanners {
         first = myObj.nextInt();
         second = myObj.nextInt();
         System.out.println(first +", " +second);
+        myObj.close();  //사용후 닫아줘야한다.
         // 프린트에 변수가 2개이상 들어갈수 없기 때문에+", "+를 사용하여 하나로 만들어 준다.
         // return 0;
     
+}
 }
