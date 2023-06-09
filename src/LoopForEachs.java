@@ -5,17 +5,17 @@ public class LoopForEachs {
     // for (type variableName : arrayName) {
     // code block to be executed
         try {
-            ArrayList<String> cars = new ArrayList<String>();
-            cars.add("Volvo");
-            cars.add("BMW");
-            cars.add("Ford");
-            cars.add("Mazda");
+            // ArrayList<String> cars = new ArrayList<String>();
+            // cars.add("Volvo");
+            // cars.add("BMW");
+            // cars.add("Ford");
+            // cars.add("Mazda");
 
-            for (String car:cars){
-                System.out.println(car);
-            }
+            // for (String car:cars){
+            //     System.out.println(car);
+            // }
 
-            // Automobile Company	Vehicle Names
+            //carCompany   CarName    Year
             ArrayList<HashMap> carList = new ArrayList<HashMap>();
             HashMap<String, String> carSpec = new HashMap<String, String>();
             carSpec.put("carCompany", "Ford");
