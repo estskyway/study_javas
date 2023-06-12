@@ -5,7 +5,7 @@ public class ConnectDBs {
         try {
             // - MySQL workbench 실행 : JDBC
             // - User/password와 접속 IP:port 접속
-            String url = "jdbc:mysql://localhost:3306/db_cars";
+            String url = "jdbc:mysql://127.0.0.1:3306/db_cars";
             String user = "root";
             String password = "!yojulab*";
 
@@ -22,10 +22,56 @@ public class ConnectDBs {
                 resultSet.getString("COMPANY_ID")
                 +resultSet.getString("COMPANY"));
             }
+
+            // SELECT COUNT(*) AS CNT FROM factorys;
+
+            quary = "SELECT COUNT(*) AS CNT FROM factorys";
+             resultSet = statement.executeQuery(quary);
+             int totalCount = 0;
+              while(resultSet.next()){
+               
+                System.out.println( 
+                resultSet.getInt("CNT"));
+                totalCount = resultSet.getInt("CNT");
+            }
+
+            // INSERT INTO factorys 
+            // (COMPANY_ID,COMPANY)
+            // VALUE
+            // ('CAR-01', 'AUDI');
+            String companyId = "CAR-01";
+            String company = "AUDI";
+            quary = "INSERT INTO factorys " +
+                    "(COMPANY_ID,COMPANY) " +
+                    "VALUE " +
+                    "('"+companyId+"', '"+company+"') ";
+            int count = statement.executeUpdate(quary);
+
+            // UPDATE factorys 
+            // SET COMPANY = '페러리'
+            // WHERE COMPANY_ID = 'CAR-01' ;
+
+            String set_company = "페러리";
+            String update_company_id = "CAR-01";
+            quary = "UPDATE factorys " +
+                    "SET COMPANY = '" + set_company + "' " +
+                    "WHERE COMPANY_ID = '" + update_company_id + "' ";
+                // pk 중복이라는 오류가 나오는데 어떻게 해결해야 하는지 모르겠어요
+                // "int count = statement.executeUpdate(quary);" 구문이 어떤 역할을 하는지 알려주세요
+
+            // DELETE FROM factorys
+            // WHERE COMPANY_ID = 'CAR-01' ;
+
+            String delete_company_id = "CAR-01";
+            quary= "DELETE FROM factorys" +
+                    "WHERE COMPANY_ID = '"+ delete_company_id +"' " ;
             System.out.println();
+
         } catch (Exception e) {
             // TODO: handle exception
+            System.out.println(e.getMessage());
         }
+        System.out.println();
         // return 0;
     }
 }
