@@ -4,6 +4,8 @@ import cars.FactoryDMLs;
 
 public class ConnectDBsWithMethod {
     public static void main(String[] args) {
+        Connection connection
+        Statement statement;
         try {
             // - MySQL workbench 실행 : JDBC
             // - User/password와 접속 IP:port 접속
@@ -15,17 +17,17 @@ public class ConnectDBsWithMethod {
             System.out.println("DB연결 성공\n");
 
             // - query Edit
-            Statement statement = connection.createStatement();
+            Statement statement = connection.createStatement(); //Editor 참 띄우기
             String query = "SELECT * FROM factorys";
             FactoryDMLs factoryDMLs = new FactoryDMLs();
-            ResultSet resultSet = factoryDMLs.SelectStatements(statement, query);
+            ResultSet resultSet = factoryDMLs.selectStatements(statement, query);
             while (resultSet.next()) {
                 System.out.println(resultSet.getString("COMPANY_ID") + resultSet.getString("COMPANY"));
             }
 
             // SELECT COUNT(*) AS CNT FROM factorys;
             query = "SELECT COUNT(*) AS CNT FROM factorys";
-            resultSet = statement.executeQuery(query);
+            resultSet = factoryDMLs.selectStatements(statement, query);
             int totalCount = 0;
             while (resultSet.next()) {
                 System.out.println(resultSet.getInt("CNT"));
@@ -45,11 +47,17 @@ public class ConnectDBsWithMethod {
                     " VALUE " +
                     "('"+companyId+"', '"+company+"') ";
             
-            int count = statement.executeUpdate(query);
+            int count = factoryDMLs.insertStatement(statement, query);
             System.out.println();
+            
+            connection.close();
+            statement.close();
         } catch (Exception e) {
             // TODO: handle exception
             System.out.println(e.getMessage());
+        } finally {
+           
+
         }
         System.out.println();
     }
