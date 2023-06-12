@@ -57,8 +57,7 @@ public class ConnectDBs {
                     "SET COMPANY = '" + set_company + "' " +
                     "WHERE COMPANY_ID = '" + update_company_id + "' ";
             count = statement.executeUpdate(quary);
-                // pk 중복이라는 오류가 나오는데 어떻게 해결해야 하는지 모르겠어요
-                // "int count = statement.executeUpdate(quary);" 구문이 어떤 역할을 하는지 알려주세요
+
 
             // DELETE FROM factorys
             // WHERE COMPANY_ID = 'CAR-01' ;
