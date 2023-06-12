@@ -64,8 +64,8 @@ public class ConnectDBs {
             // WHERE COMPANY_ID = 'CAR-01' ;
 
             String delete_company_id = "CAR-01";
-            quary= "DELETE FROM factorys" +
-                    "WHERE COMPANY_ID = '"+ delete_company_id +"' " ;
+            quary= "DELETE FROM factorys " +
+                    "WHERE COMPANY_ID = '" + delete_company_id + "' " ;
             count = statement.executeUpdate(quary);
             System.out.println();
 
