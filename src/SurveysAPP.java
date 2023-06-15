@@ -3,6 +3,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+import surveys.Statistics;
+
 public class SurveysAPP {
     public static void main(String[] args) {
         try {
@@ -17,19 +19,10 @@ public class SurveysAPP {
 
             // - query Edit
             Statement statement = connection.createStatement();
-            System.out.println("--- 통계 ---");
-            // -- 총 설문자 : 3명
-            String queryA = "SELECT COUNT(*) CNT\r\n" + //
-                    "FROM (\r\n" + //
-                    "\tSELECT RESPONDENTS_ID, COUNT(*) CNT\r\n" + //
-                    "\tFROM statistics\r\n" + //
-                    "\tgroup by RESPONDENTS_ID\r\n" + //
-                    "\t) AS T_STATIC";
-            ResultSet resultSet = statement.executeQuery(queryA);
-            while (resultSet.next()) {
-                System.out.println("-- 총 설문자" + resultSet.getString("CNT"));
-            }
-            
+
+            // 통계 - 총 설문자 표시
+            Statistics statistics = new Statistics();
+            statistics.getRespondents(statement);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
