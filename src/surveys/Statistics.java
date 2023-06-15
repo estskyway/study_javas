@@ -1,10 +1,10 @@
 package surveys;
 
-import java.beans.Statement;
+import java.sql.Statement;
 import java.sql.ResultSet;
 
 public class Statistics {
-    public int getRespondents(java.sql.Statement statement){
+    public int getRespondents(Statement statement){
         try {
             System.out.println("--- 통계 ---");
             // -- 총 설문자 : 3명
@@ -16,7 +16,7 @@ public class Statistics {
                     "\t) AS T_STATIC";
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()) {
-                System.out.println("-- 총 설문자" + resultSet.getString("CNT"));
+                System.out.println("-- 총 설문자 : " + resultSet.getString("CNT"));
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
