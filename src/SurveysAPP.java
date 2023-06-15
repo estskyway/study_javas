@@ -22,6 +22,7 @@ public class SurveysAPP {
             while (resultSet.next()) {
                 System.out.println(resultSet.getString("COMPANY_ID") + resultSet.getString("COMPANY"));
             }
+            
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
