@@ -13,7 +13,7 @@ import surveys.Statistics;
 /**
  * SurveysApp
  */
-public class SurveysApp {
+public class SurveysAPP {
     public static void main(String[] args) {
         try {
             // - MySQL workbench 실행 : JDBC
