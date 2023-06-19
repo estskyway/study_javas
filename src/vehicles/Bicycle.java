@@ -7,7 +7,7 @@ public class Bicycle {
     String color ; 
     HashMap<String, Object> spec ;
     public Bicycle(){
-
+        System.out.println("Bicycle - param empty");
     }
     // 생성자
     public Bicycle(int price, String color){
