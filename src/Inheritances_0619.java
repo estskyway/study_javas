@@ -2,10 +2,11 @@
  * 그 class가 최고상단인 object에서 가져오는지 확인하기
  */
 
-import vehicles_0619.Bicycle;
-import vehicles_0619.MountainBike;
+import vehicles.Bicycle;
+import vehicles.MountainBike;
+import vehicles.RoadCycle;
 
-public class Inheritances_0619 {
+public class Inheritances {
     public static void main(String[] args) {
         try {
             // Object 확인
@@ -18,8 +19,11 @@ public class Inheritances_0619 {
 
             // 상속해 활용
             // MountainBike mountainBike = new MountainBike();
-            MountainBike mountainBike = new MountainBike(6200, "yellow", 5);
+            /* MountainBike mountainBike = new MountainBike(6200, "yellow", 5);
+               System.out.println(); */
+            RoadCycle roadCycle = new RoadCycle(5800, "yellow green", "speed");
             System.out.println();
+
             /* objectInheritance의 method가 몇개인지 알아보자~ 
             = 그 class의 기능을 받았다 = 상속을 받았다 안받았다 
             = method의 갯수로 그 수치를 알 수 있다
