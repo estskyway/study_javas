@@ -18,8 +18,8 @@ public class Inheritances {
             // MountainBike mountainBike = new MountainBike(6200, "yellow", 5);
 
             // 상속활용 2
-            RoadCycle roadCycle = new RoadCycle(null, null, 0);
-            System.out.println();
+            RoadCycle roadCycle = new RoadCycle("bike1", "blue", 5000);
+            System.out.println(roadCycle.toString());
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
