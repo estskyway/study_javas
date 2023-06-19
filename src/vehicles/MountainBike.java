@@ -14,5 +14,5 @@ public class MountainBike extends Bicycle {
         String str = "price : " + super.price + ", color : "+ super.color 
                    + ", seatHight : " +this.seatHight ;
         return str; 
-    }    
+    }
 }

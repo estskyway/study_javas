@@ -1,6 +1,7 @@
 import inheritances.ObjectInheritances;
 import vehicles.Bicycle;
 import vehicles.MountainBike;
+import vehicles.RoadCycle;
 
 public class Inheritances {
     public static void main(String[] args) {
@@ -14,8 +15,10 @@ public class Inheritances {
 
             // 상속해 활용
             // MountainBike mountainBike = new MountainBike();
-            MountainBike mountainBike = new MountainBike(6200, "yellow", 5);
-            
+            // MountainBike mountainBike = new MountainBike(6200, "yellow", 5);
+
+            // 상속활용 2
+            RoadCycle roadCycle = new RoadCycle(null, null, 0);
             System.out.println();
 
         } catch (Exception e) {
