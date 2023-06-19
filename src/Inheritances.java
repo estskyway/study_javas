@@ -1,7 +1,14 @@
+import java.util.HashMap;
+import java.util.Map;
+
 import inheritances.ObjectInheritances;
 import vehicles.Bicycle;
+import vehicles.Bike;
+import vehicles.Car;
 import vehicles.MountainBike;
 import vehicles.RoadCycle;
+import vehicles.Scooter;
+import vehicles.Vehicle;
 
 public class Inheritances {
     public static void main(String[] args) {
@@ -19,8 +26,23 @@ public class Inheritances {
 
             // 상속활용 2
             // RoadCycle roadCycle = new RoadCycle(null, null, 0);
-            RoadCycle roadCycle = new RoadCycle("bike1", "blue", 5000);
-            System.out.println(roadCycle.toString());
+            // RoadCycle roadCycle = new RoadCycle("bike1", "blue", 5000);
+            // System.out.println(roadCycle.toString());
+
+            // 구현하고 호출하기
+            // Car car = new Car();
+            // int speed = car.speedUp(1);
+            // speed = car.speedDwon(2);
+
+            // Vehicle bike = new Bike();
+            // Vehicle car_second = new Car();
+            // System.out.println();
+
+            // Map<String, String> hashMap = new HashMap<>();
+            
+            // 추상화 확인
+            Scooter scooter = new Scooter();
+            System.out.println();
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
