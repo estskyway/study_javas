@@ -1,4 +1,4 @@
-package vehicles_0619;
+package vehicles;
 
 public class MountainBike extends Bicycle {
     int seatHight;            //extend를 한다면 Bicycle의 모든 기능이 있는채이다
@@ -14,5 +14,5 @@ public class MountainBike extends Bicycle {
         String str = "price : " + super.price + ", color : "+ super.color 
                    + ", seatHight : " +this.seatHight ;
         return str; 
-    }    
+    }
 }
