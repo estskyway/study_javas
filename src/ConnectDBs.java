@@ -5,8 +5,8 @@ public class ConnectDBs {
         try {
             // - MySQL workbench 실행 : JDBC
             // - User/password와 접속 IP:port 접속
-            String url = "jdbc:mysql://127.0.0.1:3306/db_cars";
-            String user = "root";
+            String url = "jdbc:mysql://192.168.0.51:3306/db_cars";
+            String user = "yojulab";
             String password = "!yojulab*";
 
             Connection connection = DriverManager.getConnection(url, user, password);
@@ -56,7 +56,7 @@ public class ConnectDBs {
             quary = "UPDATE factorys " +
                     "SET COMPANY = '" + set_company + "' " +
                     "WHERE COMPANY_ID = '" + update_company_id + "' ";
-            count = statement.executeUpdate(quary);
+            // count = statement.executeUpdate(quary);
 
 
             // DELETE FROM factorys
@@ -65,7 +65,7 @@ public class ConnectDBs {
             String delete_company_id = "CAR-01";
             quary= "DELETE FROM factorys " +
                     "WHERE COMPANY_ID = '" + delete_company_id + "' " ;
-            count = statement.executeUpdate(quary);
+            // count = statement.executeUpdate(quary);
             System.out.println();
 
         } catch (Exception e) {
